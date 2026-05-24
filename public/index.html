@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#88a899" />
+  <title>همسوگ | همراهی آرام برای عبور از سوگ</title>
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="/icon-192.png" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero card soft">
+      <div class="brand-row">
+        <div class="logo-mark icon-mark" aria-hidden="true"></div>
+        <div>
+          <h1>همسوگ</h1>
+          <p>همراهی آرام برای عبور از سوگ</p><span class="online-badge">نسخه آنلاین و قابل نصب</span>
+        </div>
+      </div>
+      <h2>عبور از سوگ، تنهایی نمی‌خواهد</h2>
+      <p class="lead">گاهی از دست دادن یک عزیز، یک رابطه، یک زندگی یا حتی یک امید، انسان را در نقطه‌ای قرار می‌دهد که ادامه دادن سخت می‌شود. اینجا برای قضاوت کردن نیست؛ برای شنیدن، همراهی و کمک به بازسازی آرامش شماست.</p>
+      <a class="primary-btn" href="#requestForm">درخواست تماس مشاوره</a>
+    </section>
+
+
+    <section class="card install-card" id="installBox">
+      <h3>نصب همسوگ روی موبایل</h3>
+      <p class="muted">برای دسترسی سریع، برنامه را روی صفحه اصلی گوشی نصب کنید.</p>
+      <button class="secondary-btn" id="installAppBtn" type="button">نصب روی موبایل</button>
+      <p class="install-help">اگر دکمه نصب فعال نشد: در Chrome از منوی سه‌نقطه گزینه <b>Add to Home screen</b> یا <b>Install app</b> را بزنید.</p>
+    </section>
+
+    <section class="card trust-box">
+      <h3>چه زمانی می‌توانید درخواست ثبت کنید؟</h3>
+      <div class="chips">
+        <span>فوت عزیز</span><span>جدایی عاطفی</span><span>طلاق</span><span>احساس تنهایی</span><span>سوگ شغلی</span><span>فشار روحی بعد از فقدان</span>
+      </div>
+    </section>
+
+    <section class="card" id="requestForm">
+      <h3>ثبت درخواست مشاوره</h3>
+      <p class="muted">اطلاعات شما محرمانه است و فقط برای هماهنگی تماس مشاوره استفاده می‌شود.</p>
+      <form id="leadForm" class="form-grid">
+        <label>نام و نام خانوادگی *
+          <input name="fullName" autocomplete="name" required placeholder="مثلاً: سارا احمدی" />
+        </label>
+        <label>شماره موبایل *
+          <input name="phone" inputmode="tel" autocomplete="tel" required placeholder="مثلاً: 09123456789" />
+        </label>
+        <label>شهر
+          <input name="city" placeholder="مثلاً: تهران" />
+        </label>
+        <label>نوع سوگ یا مسئله *
+          <select name="griefType" required>
+            <option value="">انتخاب کنید</option>
+            <option>فوت عزیز</option>
+            <option>جدایی عاطفی</option>
+            <option>طلاق</option>
+            <option>از دست دادن شغل</option>
+            <option>سوگ حیوان خانگی</option>
+            <option>احساس تنهایی یا افسردگی بعد از فقدان</option>
+            <option>سایر موارد</option>
+          </select>
+        </label>
+        <label>زمان مناسب تماس
+          <select name="preferredTime">
+            <option>فرقی ندارد</option>
+            <option>صبح</option>
+            <option>ظهر</option>
+            <option>عصر</option>
+            <option>شب</option>
+          </select>
+        </label>
+        <label>میزان فوریت حال فعلی
+          <select name="urgency">
+            <option>معمولی</option>
+            <option>نیاز به تماس زودتر</option>
+            <option>خیلی سخت و فوری</option>
+          </select>
+        </label>
+        <label class="full">در چند جمله بگویید الان چه چیزی بیشتر اذیتتان می‌کند؟ *
+          <textarea name="description" rows="5" required placeholder="اینجا با خیال راحت بنویسید..."></textarea>
+        </label>
+        <label class="check full">
+          <input type="checkbox" name="consent" required />
+          <span>موافقم تیم مشاوره برای هماهنگی جلسه با من تماس بگیرد. اطلاعات من محرمانه می‌ماند.</span>
+        </label>
+        <div class="warning full">این برنامه جایگزین خدمات فوری پزشکی یا اورژانس روان‌پزشکی نیست. اگر در خطر فوری هستید یا احتمال آسیب به خود یا دیگران وجود دارد، با اورژانس یا مرکز درمانی تماس بگیرید.</div>
+        <button class="primary-btn full" type="submit">ثبت درخواست و دریافت تماس</button>
+        <p id="formMessage" class="message full" role="status"></p>
+      </form>
+    </section>
+
+    <section class="card faq">
+      <h3>سوالات رایج</h3>
+      <details open><summary>جلسه اول برای چیست؟</summary><p>برای شنیدن وضعیت شما، شناخت نیاز اصلی و پیشنهاد مسیر مناسب همراهی است.</p></details>
+      <details><summary>اطلاعات من کجا استفاده می‌شود؟</summary><p>فقط برای تماس و پیگیری درخواست مشاوره استفاده می‌شود.</p></details>
+      <details><summary>آیا همه چیز محرمانه است؟</summary><p>بله، اطلاعات ثبت‌شده محرمانه تلقی می‌شود و در اختیار افراد غیرمرتبط قرار نمی‌گیرد.</p></details>
+    </section>
+
+    <footer>
+      <a href="/admin-v4.html">ورود مدیر</a>
+      <span>© همسوگ</span>
+    </footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
