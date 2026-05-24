@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#88a899" />
+  <title>پنل مدیریت همسوگ - نسخه تماس و پیامک</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="admin-shell">
+    <section class="card admin-head">
+      <div class="brand-row">
+        <div class="logo-mark icon-mark" aria-hidden="true"></div>
+        <div><h1>پنل مدیریت همسوگ</h1><p>مدیریت درخواست‌ها + تماس مستقیم + پیامک شماره کارت و مبلغ</p></div>
+      </div>
+      <div class="admin-actions">
+        <button id="refreshBtn" class="secondary-btn">به‌روزرسانی</button>
+        <button id="exportBtn" class="secondary-btn">خروجی اکسل/CSV</button>
+        <button id="logoutBtn" class="ghost-btn">خروج</button>
+      </div>
+    </section>
+
+    <section id="loginCard" class="card login-card">
+      <h2>ورود مدیر</h2>
+      <p class="muted">نام کاربری و رمز پیش‌فرض داخل فایل راهنما نوشته شده است.</p>
+      <form id="loginForm" class="form-grid one">
+        <label>نام کاربری
+          <input name="username" required placeholder="admin" />
+        </label>
+        <label>رمز عبور
+          <input name="password" type="password" required placeholder="admin123" />
+        </label>
+        <button class="primary-btn" type="submit">ورود</button>
+        <p id="loginMessage" class="message"></p>
+      </form>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <div class="stats-grid">
+        <div class="stat card"><strong id="totalCount">0</strong><span>کل درخواست‌ها</span></div>
+        <div class="stat card"><strong id="newCount">0</strong><span>جدید</span></div>
+        <div class="stat card"><strong id="soldCount">0</strong><span>خرید انجام شد</span></div>
+      </div>
+      <section class="card payment-settings" style="border:2px solid #6d9886;background:#f6fff9">
+        <h2>✅ تنظیمات پیامک و کارت</h2>
+        <p class="muted">این اطلاعات روی سرور ذخیره می‌شود و از هر موبایل یا کامپیوتری در پنل مدیریت قابل استفاده است.</p>
+        <div class="form-grid">
+          <label>شماره کارت
+            <input id="cardNumberInput" placeholder="مثلاً ۶۲۱۹-xxxx-xxxx-xxxx" />
+          </label>
+          <label>مبلغ
+            <input id="amountInput" placeholder="مثلاً ۲,۵۰۰,۰۰۰ تومان" />
+          </label>
+          <label class="full">متن پیامک پیش‌فرض
+            <textarea id="smsTemplateInput" rows="3"></textarea>
+          </label>
+        </div>
+        <button id="savePaymentSettingsBtn" class="primary-btn" type="button">ذخیره تنظیمات پیامک</button>
+        <p id="paymentSettingsMessage" class="message"></p>
+      </section>
+
+      <section class="card filters">
+        <input id="searchInput" placeholder="جستجو بر اساس نام، شماره یا توضیحات..." />
+        <select id="statusFilter">
+          <option value="">همه وضعیت‌ها</option>
+          <option>جدید</option>
+          <option>تماس گرفته شد</option>
+          <option>نیاز به تماس مجدد</option>
+          <option>خرید انجام شد</option>
+          <option>عدم پاسخ</option>
+          <option>لغو شد</option>
+        </select>
+      </section>
+      <section id="leadsList" class="leads-list"></section>
+    </section>
+  </main>
+  <script src="/admin.js"></script>
+</body>
+</html>

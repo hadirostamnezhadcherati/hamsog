@@ -1,0 +1,19 @@
+{
+  "name": "hamsog",
+  "version": "1.7.0",
+  "description": "همسوگ - اپلیکیشن آنلاین ثبت درخواست مشاوره سوگ، پنل مدیریت، تماس مستقیم و پیامک",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "grief",
+    "coaching",
+    "lead",
+    "pwa",
+    "hamsog"
+  ],
+  "author": "HADI",
+  "license": "MIT"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "همسوگ | درخواست مشاوره سوگ",
+  "short_name": "همسوگ",
+  "description": "اپلیکیشن آنلاین ثبت درخواست مشاوره سوگ و مدیریت تماس",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "portrait",
+  "background_color": "#f7f1e8",
+  "theme_color": "#88a899",
+  "dir": "rtl",
+  "lang": "fa",
+  "categories": [
+    "health",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
